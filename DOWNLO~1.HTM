@@ -1,0 +1,266 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <title>Download and Installation: LETS webtool</title>
+</head>
+<body bgcolor="#009900" text="#FFFFFF" link="#009900" vlink="#FFFF00" alink="#006600">
+<A NAME="top"></A> 
+<center>
+<table BORDER=0 CELLPADDING=3 WIDTH="75%">
+	<tr><td colspan=2 BGCOLOR="#FFFFFF" align="center"><img SRC="images/longlets.gif"></td></tr>
+	<tr>
+		<td colspan=2 ALIGN=CENTER BGCOLOR="#FFFFFF">
+			<font face="Verdana" color="#009900" size=+2>Download and Installation</font>
+		</td>
+	</tr>
+	
+</table>
+  <table width="75%" align=center border=0 cellspacing=1>
+	<tr> 
+	  <td colspan=3 bgcolor="#009900"><b><font face="Verdana" size=-1></font></b></td>
+	</tr>
+	<tr> 
+	  <td width="2%"><LI>&nbsp;&nbsp;&nbsp;</td>
+	  <td bgcolor="#FFFFFF" width="59%"> 
+		<li> <font face="Verdana" size=-1 color="#66FF00"> 
+		  <a href="download.html#disclaimer">Disclaimer</a> 
+		  </font> </li>
+	  </td>
+	  <td bgcolor="#009900" width="38%"></td>
+	</tr>
+	<tr bgcolor="#009900"> 
+	  <td width="2%"><LI>&nbsp;&nbsp;&nbsp;</td>
+	  <td bgcolor="#FFFFFF" width="59%"> 
+		<li> <font face="Verdana" size=-1> <a href="download.html#system">System 
+		  Requirements</a> </font> </li>
+	  </td>
+	  <td width="38%" bgcolor="#009900"></td>
+	</tr>
+	<tr bgcolor="#009900"> 
+	  <td width="2%"><LI>&nbsp;&nbsp;&nbsp;</td>
+	  <td bgcolor="#FFFFFF" width="59%"> 
+		<li> <font face="Verdana" size=-1> <a href="http://www.lets.net/ilets/LETSwebtool.zip">Download (162 kb)</a> </font> </li>
+	  </td>
+	  <td width="38%" bgcolor="#009900"></td>
+	</tr>
+	<tr bgcolor="#009900"> 
+	  <td width="2%"><LI>&nbsp;&nbsp;&nbsp;</td>
+	  <td bgcolor="#FFFFFF" width="59%"> 
+		<li> <font face="Verdana" size=-1> <a href="download.html#installing">Installation</a> </font> </li>
+	  </td>
+	  <td bgcolor="#009900" width="38%"></td>
+	</tr>
+	<tr>
+	  <td colspan=3><br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		&nbsp;</td>
+	</tr>
+	<tr> 
+	  <td colspan=3 bgcolor="#ffffcc"> <a href="#top"><img src="images/3dtop.gif" border=0 align=texttop></a> 
+		<a name="disclaimer"></a> <font face="Verdana" color="#666666" size=+2> 
+		Disclaimer </font> <br>
+		<font face="Verdana" color="#666666" size=2> 
+		<br>
+		iLETS is supplied on an as-is basis 
+		as an unsupported software package, with no 
+		warranty of its fitness for any purpose whatsoever, 
+		and no liability on anyone's part for any loss or 
+		damage incurred by its use. It may be freely 
+		modified or used for any non-profit or educational 
+		purpose, without any committment or liability 
+		on anyone's part to address any problems that may 
+		be encountered in using it. <br>
+		&nbsp; </font> </td>
+	</tr>
+	<tr> 
+	  <td colspan=3 bgcolor="#ffffcc"> <a href="#top"><img src="images/3dtop.gif" border=0 align=texttop></a> 
+		<a name="system"></a> <font face="Verdana" color="#666666" size=+2> 
+		System Requirements </font> <br>
+		<br>
+		<font face="Verdana" color="#666666" size=2> 
+		The software is a web application written in 
+		Perl CGI, and runs on a standard Unix/Linux 
+		system that's running webserver software such 
+		as Apache - the majority of commercial servers 
+		fit this discription - and also requires Perl 
+		5.0 or better installed on the server (also 
+		usually always the case). The software can also 
+		be run on a Windows 95 or better system running 
+		a webserver. The <a href="http://www.sambar.com">Sambar 
+		Server</a> can be used to modify the files on a windows computer, 
+		in conjunction with <a href="http://www.activestate.com/ActivePerl">ActivePerl 
+		for Win32</a>. In that case you have to remember 
+		to change the first few lines of the <b>webtool.cgi</b> 
+		file, before uploading it to your Unix/Linux 
+		server. For instance, while working on the software 
+		on a Windows machine, the first few lines of 
+		<b>webtool.cgi</b> look like this: <br>
+		<br>
+		<ul>
+		  <b> #!c:\Perl\bin\perl.exe<br>
+		  $db_use_flock = 0;<br>
+		  $db_dir_url = "http://localhost/cgi-bin/newWebtool";<br>
+		  </b> 
+		</ul>
+		<br>
+		The first line points to the directory where 
+		Perl is installed, while the second turns off 
+		file locking, which the Windows environment 
+		does not support. The last line points to the 
+		URL you use to view the software in a browser 
+		for offline development. For installing on a 
+		Unix system, however, the first few lines should 
+		be changed to: <br>
+		<br>
+		<ul>
+		  <b> #!/usr/bin/perl<br>
+		  $db_use_flock = 1;<br>
+		  $db_dir_url = "http://yourDomain.com/cgi-bin/yourDirectory";<br>
+		  </b> 
+		</ul>
+		<br>
+		&nbsp; </font> </td>
+	</tr>
+	<tr> 
+	  <td colspan=3 bgcolor="#ffffcc"> <a href="#top"><img src="images/3dtop.gif" border=0 align=texttop></a> 
+		<a name="installing"></a> <font face="Verdana" color="#666666" size=+2> 
+		Installing on Your Server </font> <br>
+		<br>
+		<font face="Verdana" color="#666666" size=2> 
+		To install the software, you need to find an 
+		ISP (or a friend who's already running a Unix/Linux 
+		webserver), and tell them you have some CGI 
+		scripts you want to install. If you already 
+		have web space rented with an ISP, it may not 
+		be enough - ISP's generally offer CGI access 
+		for a little more money than hosting regular, 
+		static webpages (and generally, ISP's offering 
+		free web space do not include the ability to 
+		run CGI). <br>
+		<br>
+		The costs for CGI access are still modest, however: 
+		usually around $10 / month or less (in U.S. 
+		dollars). For instance, the webtool demo was 
+		originally hosted on <a href="http://www.megs.com">www.megs.com</a> 
+		for $99 U.S. per year, which is about the usual 
+		fee. Once you've confirmed with your ISP that 
+		the account you've bought with them allows for 
+		running CGI scripts, you can take the following 
+		steps to install the software: <br>
+		<br>
+		<b>1)</b> <a href="download.html">Download</a> the software's 
+		source files. These files come packaged as a 
+		single, zipped-up file. You'll need a utility 
+		like <a href="http://www.winzip.com">Winzip</a> 
+		to extract all the files, which are shown below. 
+		Keep all the files together in a single directory 
+		(say, c:\TEMP_webtool). <br>
+		<br>
+		<img src="images/filelist.gif" align=left> <b>2)</b> 
+		You'll need a text editor that can save files 
+		in Unix format. I use <a href="http://www.winsite.com/info/pc/win95/misc/pfe101i.zip/">Programmer's 
+		File Editor</a>, which is a good free utility. 
+		Many HTML editors like Homesite also let you 
+		save files in Unix format. <b>Important:</b> 
+		the files shown contain the source code for 
+		the software. However, remember not to open 
+		them using Notepad (or any other text editor 
+		that can only save files in Windows format), 
+		or you may inadvertently save any changes you 
+		make in the wrong file format. When you upload 
+		them to a Unix/Linux system, files altered using 
+		Notepad will not run. <br>
+		<br>
+		<b>3)</b> You'll need to download and install 
+		an FTP program such as <a href="http://www.ipswitch.com">WS_FTP</a> 
+		or <a href="http://www.globalscape.com">Cute 
+		FTP</a>. These programs typically come with 
+		a 30-day trial period, and are used to upload 
+		files to your server. They also perform the 
+		crucial step of changing file permissions using 
+		the CHMOD command in Unix. You'll need to CHMOD 
+		each file you've uploaded (usually you right-click 
+		on the file), setting its read/write/execute 
+		properties correctly (a table showing the correct 
+		values is given later). <br>
+		<br>
+		<b>4)</b> Using your text editor, open up the 
+		<b>webtool.cgi</b> file, and change the following 
+		line (which is found near the top): <br>
+		<br>
+		<center>
+		  <b>&nbsp;&nbsp;&nbsp;$db_dir_url = "http://yourDomain.com/cgi-bin/webtool";<br>
+		  </b> 
+		</center>
+		<br>
+		This line needs to be changed to reflect the 
+		domain you're running the software in. Save 
+		the file in Unix format. <br>
+		<br>
+		<b>5)</b> To install, first connect to the web, 
+		then use your FTP program to login to your webserver 
+		(your ISP will have given you the username and 
+		password you need to login). Find the <b>cgi-bin</b> 
+		directory on your server, and create a subdirectory 
+		called <b>webtool</b> under it, and two directories 
+		under that, called <b>userSession</b> and <b>images</b>. 
+		Upload all the webtool files you previously 
+		extracted with your zip utility, into the <b>webtool</b> 
+		directory, and all files found in <b>images</b> 
+		into the corresponding server directory (the 
+		userSession directory should be empty). Finally, 
+		right-click on each file, to change the file 
+		permissions on each one, according to the following 
+		table: 
+		<p> 
+		<table width=500 align=center border=1>
+		  <tr>
+			<td><b>webtool.cgi</b></td>
+			<td>(755)</td>
+			<td>-rwxr-xr-x</td>
+		  </tr>
+		  <tr> 
+			<td>files ending in <b>.pl</b> or <b>.cfg</b></td>
+			<td>(644)</td>
+			<td>-rw-r--r--</td>
+		  </tr>
+		  <tr> 
+			<td>files ending in <b>.def .log .db .count</b></td>
+			<td>(666)</td>
+			<td>-rw-rw-rw-</td>
+		  </tr>
+		  <tr>
+			<td>the <b>userSession</b> directory</td>
+			<td>(777)</td>
+			<td>drwxrwxrwx</td>
+		  </tr>
+		</table>
+		<p></p>
+		<br>
+		<br>
+		Test out your installation by pointing your 
+		browser at:<br>
+		<br>
+		<center>
+		  <b>http://yourDomain/cgi-bin/webtool/webtool.cgi</b>
+		</center>
+		<br>
+		You should see the login screen. <br>
+		<br>
+		&nbsp; </font> </td>
+	</tr>
+  </table>
+</center>
+</body>
+</html>
